@@ -68,6 +68,7 @@
 		21D5A8592CE52B7600F29274 /* NotchStateUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotchStateUseCase.swift; sourceTree = "<group>"; };
 		21D5A85D2CE5387E00F29274 /* NotchAppearance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotchAppearance.swift; sourceTree = "<group>"; };
 		21D5A85F2CE538C000F29274 /* NotchBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotchBackground.swift; sourceTree = "<group>"; };
+		21D5A8622CE541BF00F29274 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +85,7 @@
 		21D5A7EF2CE5295300F29274 = {
 			isa = PBXGroup;
 			children = (
+				21D5A8622CE541BF00F29274 /* .gitignore */,
 				21D5A8122CE5298000F29274 /* GoodNotch */,
 				21D5A7F92CE5295300F29274 /* Products */,
 			);
