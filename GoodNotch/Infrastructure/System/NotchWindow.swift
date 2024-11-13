@@ -6,6 +6,7 @@
 //
 
 import AppKit
+import SwiftUI
 
 class NotchWindow: NSPanel {
     private let configuration: NotchConfiguration
@@ -28,6 +29,8 @@ class NotchWindow: NSPanel {
             backing: .buffered,
             defer: false
         )
+        
+        self.contentView = NSHostingView(rootView: NotchContentView())
         
         configureWindow()
     }

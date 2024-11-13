@@ -7,9 +7,10 @@
 
 import Foundation
 import Combine
+import AppKit
 
 final class WindowManagerServiceImpl: WindowManagerService {
-    private weak var window: NotchWindow?
+    private var window: NotchWindow?
     private let windowStateSubject = CurrentValueSubject<NotchState, Never>(.closed)
     
     var windowState: AnyPublisher<NotchState, Never> {
@@ -17,8 +18,9 @@ final class WindowManagerServiceImpl: WindowManagerService {
     }
     
     func configureWindow(_ configuration: NotchConfiguration) {
-        window = NotchWindow(configuration: configuration)
-        window?.makeKeyAndOrderFront(nil)
+        let newWindow = NotchWindow(configuration: configuration)
+        self.window = newWindow
+        newWindow.makeKeyAndOrderFront(nil)
     }
     
     func updateWindowSize(_ size: NotchConfiguration.Size) {

@@ -14,12 +14,17 @@ final class Container {
     private init() {}
     
     func register<T>(_ type: T.Type, factory: @escaping () -> T) {
-        services[String(describing: type)] = factory
+        let key = String(describing: type)
+        print("Registering service: \(key)")  // Debug log
+        services[key] = factory
     }
     
     func resolve<T>() -> T {
-        guard let factory = services[String(describing: T.self)] as? () -> T else {
-            fatalError("No registration for type \(T.self)")
+        let key = String(describing: T.self)
+        print("Resolving service: \(key)")  // Debug log
+        
+        guard let factory = services[key] as? () -> T else {
+            fatalError("No registration for type \(key)")
         }
         return factory()
     }

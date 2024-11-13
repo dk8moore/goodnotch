@@ -15,12 +15,15 @@ final class CoreAssembly {
     }
     
     func register() {
-        container.register(NotchSpaceService.self) {
-            NotchSpaceServiceImpl()
+        
+        // Register WindowManagerService
+        container.register(WindowManagerService.self) {
+            return WindowManagerServiceImpl()
         }
         
-        container.register(WindowManagerService.self) {
-            WindowManagerServiceImpl()
+        // Register NotchSpaceService
+        container.register(NotchSpaceService.self) {
+            return NotchSpaceServiceImpl()
         }
     }
 }

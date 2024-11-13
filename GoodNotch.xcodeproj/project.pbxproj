@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		21B4D1482CE563D1003EBE4F /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 21B4D1472CE563CA003EBE4F /* Info.plist */; };
 		21D5A8132CE5298000F29274 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 21D5A80C2CE5298000F29274 /* Preview Assets.xcassets */; };
 		21D5A8142CE5298000F29274 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 21D5A80E2CE5298000F29274 /* Assets.xcassets */; };
 		21D5A8152CE5298000F29274 /* GoodNotchApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21D5A8102CE5298000F29274 /* GoodNotchApp.swift */; };
@@ -35,9 +36,11 @@
 		21D5A85A2CE52B7E00F29274 /* NotchStateUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21D5A8592CE52B7600F29274 /* NotchStateUseCase.swift */; };
 		21D5A85E2CE5388400F29274 /* NotchAppearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21D5A85D2CE5387E00F29274 /* NotchAppearance.swift */; };
 		21D5A8602CE538C400F29274 /* NotchBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21D5A85F2CE538C000F29274 /* NotchBackground.swift */; };
+		21D5A8642CE55C1000F29274 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21D5A8632CE55C0C00F29274 /* AppDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		21B4D1472CE563CA003EBE4F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		21D5A7F82CE5295300F29274 /* GoodNotch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GoodNotch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		21D5A80C2CE5298000F29274 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		21D5A80E2CE5298000F29274 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -69,6 +72,7 @@
 		21D5A85D2CE5387E00F29274 /* NotchAppearance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotchAppearance.swift; sourceTree = "<group>"; };
 		21D5A85F2CE538C000F29274 /* NotchBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotchBackground.swift; sourceTree = "<group>"; };
 		21D5A8622CE541BF00F29274 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		21D5A8632CE55C0C00F29274 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +130,7 @@
 		21D5A8172CE5298400F29274 /* App */ = {
 			isa = PBXGroup;
 			children = (
+				21D5A8632CE55C0C00F29274 /* AppDelegate.swift */,
 				21D5A8102CE5298000F29274 /* GoodNotchApp.swift */,
 			);
 			path = App;
@@ -330,6 +335,7 @@
 		21D5A85C2CE52B9D00F29274 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				21B4D1472CE563CA003EBE4F /* Info.plist */,
 				21D5A80E2CE5298000F29274 /* Assets.xcassets */,
 			);
 			path = Resources;
@@ -398,6 +404,7 @@
 			files = (
 				21D5A8132CE5298000F29274 /* Preview Assets.xcassets in Resources */,
 				21D5A8142CE5298000F29274 /* Assets.xcassets in Resources */,
+				21B4D1482CE563D1003EBE4F /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -429,6 +436,7 @@
 				21D5A85A2CE52B7E00F29274 /* NotchStateUseCase.swift in Sources */,
 				21D5A82F2CE52A3800F29274 /* NotchContentView.swift in Sources */,
 				21D5A8252CE52A0500F29274 /* View+Extensions.swift in Sources */,
+				21D5A8642CE55C1000F29274 /* AppDelegate.swift in Sources */,
 				21D5A84D2CE52B1A00F29274 /* NotchState.swift in Sources */,
 				21D5A8292CE52A1F00F29274 /* NotchViewModifier.swift in Sources */,
 				21D5A8352CE52A7100F29274 /* Container.swift in Sources */,
