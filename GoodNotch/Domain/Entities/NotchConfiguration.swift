@@ -26,8 +26,8 @@ struct NotchConfiguration {
     let appearance: Appearance
     
     static let `default` = NotchConfiguration(
-        openSize: Size(width: 250, height: 68),
-        closedSize: Size(width: 250, height: 34),
+        openSize: Size(width: 190, height: 64),
+        closedSize: Size(width: 190, height: 32),
         cornerRadius: 10,
         appearance: Appearance(backgroundColor: .black, foregroundColor: .white, opacity: 1.0)
     )

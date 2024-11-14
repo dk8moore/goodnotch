@@ -22,5 +22,4 @@ struct Notch: View {
 #Preview {
     Notch(backgroundColor: NotchConfiguration.default.appearance.backgroundColor, opacity: NotchConfiguration.default.appearance.opacity, cornerRadius: NotchConfiguration.default.cornerRadius)
         .frame(width: NotchConfiguration.default.closedSize.width, height: NotchConfiguration.default.closedSize.height)
-        .padding(10)
 }

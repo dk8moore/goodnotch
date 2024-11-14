@@ -23,11 +23,9 @@ struct NotchContentView: View {
                 if viewModel.state.notchState == .open {
                     Text("Open State")
                         .foregroundColor(viewModel.state.appearance.foregroundColor)
-                        .padding()
                 } else {
                     Text("Closed State")
                         .foregroundColor(viewModel.state.appearance.foregroundColor)
-                        .padding()
                 }
             }
         }
@@ -43,4 +41,10 @@ struct NotchContentView: View {
             }
         }
     }
+}
+
+#Preview {
+    NotchContentView()
+        .frame(width: NotchConfiguration.default.closedSize.width, height: NotchConfiguration.default.closedSize.height)
+            .padding()
 }

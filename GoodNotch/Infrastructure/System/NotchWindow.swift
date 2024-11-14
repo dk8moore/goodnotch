@@ -15,7 +15,7 @@ class NotchWindow: NSPanel {
         self.configuration = configuration
         
         let screenRect = NSScreen.main?.frame ?? .zero
-        let windowRect = NSRect(
+        let windowRect = CGRect(
             x: (screenRect.width - configuration.openSize.width) / 2,
             y: screenRect.maxY - configuration.openSize.height,
             width: configuration.openSize.width,
