@@ -13,8 +13,9 @@ struct NotchContentView: View {
     
     var body: some View {
         ZStack {
-            NotchBackground(
-                appearance: viewModel.state.appearance,
+            Notch(
+                backgroundColor: viewModel.state.appearance.backgroundColor,
+                opacity: viewModel.state.appearance.opacity,
                 cornerRadius: viewModel.state.cornerRadius
             )
             

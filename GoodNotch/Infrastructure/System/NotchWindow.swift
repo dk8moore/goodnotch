@@ -15,17 +15,16 @@ class NotchWindow: NSPanel {
         self.configuration = configuration
         
         let screenRect = NSScreen.main?.frame ?? .zero
-        let windowWidth = configuration.closedSize.width
         let windowRect = NSRect(
-            x: (screenRect.width - windowWidth) / 2,
-            y: screenRect.maxY - configuration.closedSize.height,
-            width: windowWidth,
-            height: configuration.closedSize.height
+            x: (screenRect.width - configuration.openSize.width) / 2,
+            y: screenRect.maxY - configuration.openSize.height,
+            width: configuration.openSize.width,
+            height: configuration.openSize.height
         )
         
         super.init(
             contentRect: windowRect,
-            styleMask: [.borderless, .nonactivatingPanel],
+            styleMask: [.borderless, .nonactivatingPanel, .utilityWindow, .hudWindow],
             backing: .buffered,
             defer: false
         )

@@ -34,8 +34,7 @@
 		21D5A8562CE52B5A00F29274 /* WindowManagerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21D5A8552CE52B5500F29274 /* WindowManagerService.swift */; };
 		21D5A8582CE52B6D00F29274 /* SystemStateRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21D5A8572CE52B6600F29274 /* SystemStateRepository.swift */; };
 		21D5A85A2CE52B7E00F29274 /* NotchStateUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21D5A8592CE52B7600F29274 /* NotchStateUseCase.swift */; };
-		21D5A85E2CE5388400F29274 /* NotchAppearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21D5A85D2CE5387E00F29274 /* NotchAppearance.swift */; };
-		21D5A8602CE538C400F29274 /* NotchBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21D5A85F2CE538C000F29274 /* NotchBackground.swift */; };
+		21D5A8602CE538C400F29274 /* Notch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21D5A85F2CE538C000F29274 /* Notch.swift */; };
 		21D5A8642CE55C1000F29274 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21D5A8632CE55C0C00F29274 /* AppDelegate.swift */; };
 /* End PBXBuildFile section */
 
@@ -69,8 +68,7 @@
 		21D5A8552CE52B5500F29274 /* WindowManagerService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WindowManagerService.swift; sourceTree = "<group>"; };
 		21D5A8572CE52B6600F29274 /* SystemStateRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemStateRepository.swift; sourceTree = "<group>"; };
 		21D5A8592CE52B7600F29274 /* NotchStateUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotchStateUseCase.swift; sourceTree = "<group>"; };
-		21D5A85D2CE5387E00F29274 /* NotchAppearance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotchAppearance.swift; sourceTree = "<group>"; };
-		21D5A85F2CE538C000F29274 /* NotchBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotchBackground.swift; sourceTree = "<group>"; };
+		21D5A85F2CE538C000F29274 /* Notch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notch.swift; sourceTree = "<group>"; };
 		21D5A8622CE541BF00F29274 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		21D5A8632CE55C0C00F29274 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -203,7 +201,7 @@
 		21D5A81F2CE529C800F29274 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				21D5A85F2CE538C000F29274 /* NotchBackground.swift */,
+				21D5A85F2CE538C000F29274 /* Notch.swift */,
 				21D5A82A2CE52A2400F29274 /* NotchShape.swift */,
 			);
 			path = Views;
@@ -290,7 +288,6 @@
 		21D5A8472CE52AF700F29274 /* Entities */ = {
 			isa = PBXGroup;
 			children = (
-				21D5A85D2CE5387E00F29274 /* NotchAppearance.swift */,
 				21D5A84A2CE52B0F00F29274 /* NotchConfiguration.swift */,
 				21D5A84C2CE52B1600F29274 /* NotchState.swift */,
 				21D5A84E2CE52B1E00F29274 /* SystemEvent.swift */,
@@ -423,11 +420,10 @@
 				21D5A83E2CE52A9D00F29274 /* ScreenManagement.swift in Sources */,
 				21D5A8152CE5298000F29274 /* GoodNotchApp.swift in Sources */,
 				21D5A83A2CE52A9100F29274 /* CGSSpace.swift in Sources */,
-				21D5A8602CE538C400F29274 /* NotchBackground.swift in Sources */,
+				21D5A8602CE538C400F29274 /* Notch.swift in Sources */,
 				21D5A8422CE52AD200F29274 /* SystemStateRepositoryImpl.swift in Sources */,
 				21D5A8312CE52A4000F29274 /* NotchViewModel.swift in Sources */,
 				21D5A84B2CE52B1200F29274 /* NotchConfiguration.swift in Sources */,
-				21D5A85E2CE5388400F29274 /* NotchAppearance.swift in Sources */,
 				21D5A8382CE52A8500F29274 /* CoreAssemply.swift in Sources */,
 				21D5A8582CE52B6D00F29274 /* SystemStateRepository.swift in Sources */,
 				21D5A82D2CE52A3200F29274 /* ContentView.swift in Sources */,

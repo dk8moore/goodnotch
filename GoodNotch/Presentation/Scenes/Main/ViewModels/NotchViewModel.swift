@@ -14,35 +14,31 @@ final class NotchViewModel: ObservableObject {
         var currentView: NotchView = .home
         var cornerRadius: CGFloat = NotchConfiguration.default.cornerRadius
         var size: NotchConfiguration.Size = NotchConfiguration.default.closedSize
-        var appearance: NotchAppearance = .default
+        var appearance: NotchConfiguration.Appearance = NotchConfiguration.default.appearance
     }
     
     @Published private(set) var state: State = State()
     private var cancellables = Set<AnyCancellable>()
     
     func open() {
-        withAnimation(.spring()) {
-            state.notchState = .open
-            state.size = NotchConfiguration.default.openSize
-        }
+        // TODO: animate this transition
+        state.notchState = .open
+        state.size = NotchConfiguration.default.openSize
     }
     
     func close() {
-        withAnimation(.spring()) {
-            state.notchState = .closed
-            state.size = NotchConfiguration.default.closedSize
-        }
+        // TODO: animate this transition
+        state.notchState = .closed
+        state.size = NotchConfiguration.default.closedSize
     }
     
     func setView(_ view: NotchView) {
-            withAnimation(.spring()) {
-                state.currentView = view
-            }
-        }
+        // TODO: animate this transition
+        state.currentView = view
+    }
         
-    func updateAppearance(_ appearance: NotchAppearance) {
-        withAnimation(.easeInOut) {
-            state.appearance = appearance
-        }
+    func updateAppearance(_ appearance: NotchConfiguration.Appearance) {
+        // TODO: animate this transition
+        state.appearance = appearance
     }
 }
