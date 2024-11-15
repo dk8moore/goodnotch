@@ -20,11 +20,12 @@ struct NotchContentView: View {
             )
             
             VStack {
-                if viewModel.state.notchState == .open {
-                    Text("Open State")
+                switch viewModel.state.notchState {
+                case .closed:
+                    Text("Notch closed")
                         .foregroundColor(viewModel.state.appearance.foregroundColor)
-                } else {
-                    Text("Closed State")
+                case .open(let direction):
+                    Text("Direction: \(String(describing: direction))")
                         .foregroundColor(viewModel.state.appearance.foregroundColor)
                 }
             }
@@ -34,11 +35,7 @@ struct NotchContentView: View {
             height: viewModel.state.size.height
         )
         .onTapGesture {
-            if viewModel.state.notchState == .closed {
-                viewModel.open()
-            } else {
-                viewModel.close()
-            }
+            viewModel.toggleState()
         }
     }
 }

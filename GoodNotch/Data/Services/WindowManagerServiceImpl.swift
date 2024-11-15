@@ -23,6 +23,28 @@ final class WindowManagerServiceImpl: WindowManagerService {
         newWindow.makeKeyAndOrderFront(nil)
     }
     
+    func updateWindowState(_ state: NotchState) {
+        windowStateSubject.send(state)
+        guard let window = window else { return }
+        
+        switch state {
+        case .closed:
+            updateWindowSize(NotchConfiguration.default.closedSize)
+        case .open(let direction):
+            guard let screen = NSScreen.main else { return }
+            let expansion = NotchExpansion.calculate(
+                for: direction,
+                baseConfig: NotchConfiguration.default,
+                screenFrame: screen.frame
+            )
+            window.setFrame(
+                CGRect(origin: expansion.origin, size: CGSize(width: expansion.size.width, height: expansion.size.height)),
+                display: true,
+                animate: true
+            )
+        }
+    }
+    
     func updateWindowSize(_ size: NotchConfiguration.Size) {
         guard let window = window else { return }
         let frame = window.frame

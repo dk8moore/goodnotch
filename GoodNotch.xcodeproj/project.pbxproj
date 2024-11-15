@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		21339C4C2CE77C7200F1D424 /* NotchExpansion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21339C4B2CE77C6E00F1D424 /* NotchExpansion.swift */; };
 		21B4D1482CE563D1003EBE4F /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 21B4D1472CE563CA003EBE4F /* Info.plist */; };
 		21D5A8132CE5298000F29274 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 21D5A80C2CE5298000F29274 /* Preview Assets.xcassets */; };
 		21D5A8142CE5298000F29274 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 21D5A80E2CE5298000F29274 /* Assets.xcassets */; };
@@ -39,6 +40,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		21339C4B2CE77C6E00F1D424 /* NotchExpansion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotchExpansion.swift; sourceTree = "<group>"; };
 		21B4D1472CE563CA003EBE4F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		21D5A7F82CE5295300F29274 /* GoodNotch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GoodNotch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		21D5A80C2CE5298000F29274 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -288,6 +290,7 @@
 		21D5A8472CE52AF700F29274 /* Entities */ = {
 			isa = PBXGroup;
 			children = (
+				21339C4B2CE77C6E00F1D424 /* NotchExpansion.swift */,
 				21D5A84A2CE52B0F00F29274 /* NotchConfiguration.swift */,
 				21D5A84C2CE52B1600F29274 /* NotchState.swift */,
 				21D5A84E2CE52B1E00F29274 /* SystemEvent.swift */,
@@ -431,6 +434,7 @@
 				21D5A8522CE52B3900F29274 /* NotchSpaceService.swift in Sources */,
 				21D5A85A2CE52B7E00F29274 /* NotchStateUseCase.swift in Sources */,
 				21D5A82F2CE52A3800F29274 /* NotchContentView.swift in Sources */,
+				21339C4C2CE77C7200F1D424 /* NotchExpansion.swift in Sources */,
 				21D5A8252CE52A0500F29274 /* View+Extensions.swift in Sources */,
 				21D5A8642CE55C1000F29274 /* AppDelegate.swift in Sources */,
 				21D5A84D2CE52B1A00F29274 /* NotchState.swift in Sources */,

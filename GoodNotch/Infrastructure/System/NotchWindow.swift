@@ -61,6 +61,30 @@ class NotchWindow: NSPanel {
         }
     }
     
+    func updateState(_ state: NotchState) {
+            guard let screen = NSScreen.main else { return }
+            
+            let newFrame: CGRect
+            switch state {
+            case .closed:
+                let origin = NSPoint(
+                    x: (screen.frame.width - configuration.closedSize.width) / 2,
+                    y: screen.frame.maxY - configuration.closedSize.height
+                )
+                newFrame = CGRect(origin: origin, size: CGSize(width: configuration.closedSize.width, height: configuration.closedSize.height))
+                
+            case .open(let direction):
+                let expansion = NotchExpansion.calculate(
+                    for: direction,
+                    baseConfig: configuration,
+                    screenFrame: screen.frame
+                )
+                newFrame = CGRect(origin: expansion.origin, size: CGSize(width: expansion.size.width, height: expansion.size.height))
+            }
+            
+            setFrame(newFrame, display: true, animate: true)
+        }
+    
     override var canBecomeKey: Bool { false }
     override var canBecomeMain: Bool { false }
 }

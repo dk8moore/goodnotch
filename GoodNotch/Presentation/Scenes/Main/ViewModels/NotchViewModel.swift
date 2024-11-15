@@ -19,11 +19,36 @@ final class NotchViewModel: ObservableObject {
     
     @Published private(set) var state: State = State()
     private var cancellables = Set<AnyCancellable>()
+    private var currentDirectionIndex = 0
+    private let directions: [NotchOpenDirection] = [
+        .bottom, .left, .right, .leftBottom, .rightBottom, .all
+    ]
+    
+    func toggleState() {
+        if case .closed = state.notchState {
+            open()
+        } else {
+            close()
+        }
+    }
     
     func open() {
         // TODO: animate this transition
-        state.notchState = .open
-        state.size = NotchConfiguration.default.openSize
+        let direction = directions[currentDirectionIndex]
+        state.notchState = .open(direction)
+        
+        // Get the expansion for the current direction
+        guard let screen = NSScreen.main else { return }
+        let expansion = NotchExpansion.calculate(
+            for: direction,
+            baseConfig: NotchConfiguration.default,
+            screenFrame: screen.frame
+        )
+        
+        state.size = expansion.size
+        
+        // Cycle through directions
+        currentDirectionIndex = (currentDirectionIndex + 1) % directions.count
     }
     
     func close() {

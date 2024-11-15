@@ -6,10 +6,21 @@
 //
 
 import Foundation
+import CoreGraphics
 
 enum NotchState {
-    case open
+    case open(NotchOpenDirection)
     case closed
+}
+
+enum NotchOpenDirection {
+    case left
+    case right
+    // case leftRight
+    case bottom
+    case leftBottom
+    case rightBottom
+    case all
 }
 
 enum NotchView {
