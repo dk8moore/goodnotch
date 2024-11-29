@@ -21,8 +21,14 @@ final class NotchViewModel: ObservableObject {
     private var cancellables = Set<AnyCancellable>()
     private var currentDirectionIndex = 0
     private let directions: [NotchOpenDirection] = [
-        .bottom, .left, .right, .leftBottom, .rightBottom, .all
+        .bottom, .left, .right, .sides, .leftBottom, .rightBottom, .all
     ]
+    
+    private let windowManager: WindowManagerService
+    
+    init(windowManager: WindowManagerService = Container.shared.resolve()) {
+        self.windowManager = windowManager
+    }
     
     func toggleState() {
         if case .closed = state.notchState {
@@ -46,6 +52,7 @@ final class NotchViewModel: ObservableObject {
         )
         
         state.size = expansion.size
+        windowManager.updateWindowState(.open(direction))
         
         // Cycle through directions
         currentDirectionIndex = (currentDirectionIndex + 1) % directions.count
@@ -55,6 +62,7 @@ final class NotchViewModel: ObservableObject {
         // TODO: animate this transition
         state.notchState = .closed
         state.size = NotchConfiguration.default.closedSize
+        windowManager.updateWindowState(.closed)
     }
     
     func setView(_ view: NotchView) {

@@ -24,9 +24,10 @@ struct NotchExpansion {
         switch direction {
         case .left:
             let width = baseConfig.openSize.width * 1.5
+            let extraWidth = width - baseConfig.closedSize.width
             return NotchExpansion(
                 size: .init(width: width, height: baseConfig.openSize.height),
-                origin: .init(x: baseCenterX - (width - baseConfig.closedSize.width), y: baseY)
+                origin: .init(x: baseCenterX - extraWidth, y: baseY)
             )
             
         case .right:
@@ -44,10 +45,11 @@ struct NotchExpansion {
         case .leftBottom:
             let width = baseConfig.openSize.width * 1.5
             let height = baseConfig.openSize.height * 1.5
+            let extraWidth = width - baseConfig.closedSize.width
             return NotchExpansion(
                 size: .init(width: width, height: height),
                 origin: .init(
-                    x: baseCenterX - (width - baseConfig.closedSize.width),
+                    x: baseCenterX - extraWidth,
                     y: baseY - (height - baseConfig.closedSize.height)
                 )
             )
@@ -60,13 +62,22 @@ struct NotchExpansion {
                 origin: .init(x: baseCenterX, y: baseY - (height - baseConfig.closedSize.height))
             )
             
+        case .sides:
+            let width = baseConfig.openSize.width * 2  // Double width for both sides
+            let extraWidth = width - baseConfig.closedSize.width
+            return NotchExpansion(
+                size: .init(width: width, height: baseConfig.openSize.height),
+                origin: .init(x: baseCenterX - (extraWidth / 2), y: baseY)
+            )
+            
         case .all:
             let width = baseConfig.openSize.width * 2
             let height = baseConfig.openSize.height * 2
+            let extraWidth = width - baseConfig.closedSize.width
             return NotchExpansion(
                 size: .init(width: width, height: height),
                 origin: .init(
-                    x: baseCenterX - (width - baseConfig.closedSize.width) / 2,
+                    x: baseCenterX - (extraWidth / 2),
                     y: baseY - (height - baseConfig.closedSize.height)
                 )
             )

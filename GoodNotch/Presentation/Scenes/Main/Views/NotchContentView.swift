@@ -43,5 +43,4 @@ struct NotchContentView: View {
 #Preview {
     NotchContentView()
         .frame(width: NotchConfiguration.default.closedSize.width, height: NotchConfiguration.default.closedSize.height)
-            .padding()
 }

@@ -16,7 +16,7 @@ enum NotchState {
 enum NotchOpenDirection {
     case left
     case right
-    // case leftRight
+    case sides
     case bottom
     case leftBottom
     case rightBottom

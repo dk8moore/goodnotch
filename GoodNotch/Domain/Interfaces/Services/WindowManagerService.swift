@@ -11,5 +11,5 @@ import Combine
 protocol WindowManagerService {
     var windowState: AnyPublisher<NotchState, Never> { get }
     func configureWindow(_ configuration: NotchConfiguration)
-    func updateWindowSize(_ size: NotchConfiguration.Size)
+    func updateWindowState(_ state: NotchState)
 }
